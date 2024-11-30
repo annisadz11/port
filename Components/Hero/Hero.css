@@ -1,0 +1,130 @@
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px; /* Mengurangi jarak antar elemen */
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #161513;
+    margin-bottom: 0; /* Hapus margin bawah agar lebih dekat ke About */
+}
+
+.hero-img {
+    margin-top: 100px;
+    animation: imageMove 5s ease-in-out infinite;
+    position: relative; /* Agar shadow berfungsi dengan baik */
+}
+
+.hero-img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5); /* Efek bayangan */
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Efek hover pada gambar */
+.hero-img img:hover {
+    transform: scale(1.20); /* Zoom in saat hover */
+}
+
+/* Animasi untuk gambar */
+@keyframes imageMove {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.hero h1 {
+    font-size: 60px;
+    font-weight: 600;
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.hero h3 {
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/* Tombol More Info */
+.swipe-up {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px; /* Mengurangi margin atas tombol */
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+}
+
+/* Hover effect pada tombol More Info */
+.swipe-up:hover {
+    transform: scale(1.1); /* Efek hover */
+    border: 2px solid white;
+}
+/* Jarak antara hero dan about */
+.hero {
+    margin-bottom: 0px; /* Memberikan jarak lebih besar di bawah Hero */
+}
+
+/* Bagian About dengan Border Radius Oval */
+.about {
+    border-radius: 50px; /* Border radius oval */
+    padding: 30px;
+    margin: 100px 300px 150px; /* Memberikan margin yang pas */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero {
+        gap: 25px;
+        padding: 10px; /* Tambahkan padding untuk ruang di sekitar konten */
+    }
+
+    .hero h1 {
+        font-size: 28px; /* Menyesuaikan ukuran font untuk mobile */
+    }
+
+    .hero h2 {
+        font-size: 28px; /* Menyesuaikan ukuran font untuk mobile */
+    }
+
+    .hero h3 {
+        font-size: 18px; /* Menyesuaikan ukuran font untuk mobile */
+    }
+
+    .swipe-up {
+        display: none; /* Menyembunyikan tombol More Info di mobile */
+    }
+
+    .hero-img img {
+        width: 200px; /* Menyesuaikan ukuran gambar untuk mobile */
+        height: 200px; /* Menyesuaikan ukuran gambar untuk mobile */
+    }
+}

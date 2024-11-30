@@ -1,0 +1,122 @@
+.skills-section {
+  padding: 10px 0;
+  text-align: center;
+  margin: 50px;
+}
+
+.skills-title {
+  margin-bottom: 40px;
+}
+
+.skills-title h1 {
+  font-size: 4.3rem;
+  font-weight: 600; /* Tambahkan jika ingin menebalkan judul */
+}
+
+.skills-white {
+  color: white; /* Warna putih untuk "My" */
+}
+
+.skills-gradient {
+  background: linear-gradient(270deg, #DF8908, #B415FF);
+  background-clip: text;
+  -webkit-background-clip: text; /* Untuk mendukung browser WebKit */
+  color: transparent; /* Membuat teks transparan untuk efek gradient */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.skill-item {
+  position: relative;
+  background: #ede8ea;
+  width: 130px; /* Sesuaikan ukuran item */
+  height: 130px; /* Sesuaikan ukuran item */
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Menyembunyikan bagian yang keluar */
+  perspective: 1000px; /* Menambahkan perspektif untuk efek flip */
+}
+
+.skill-img {
+  width: 65px; /* Sesuaikan ukuran logo */
+  mix-blend-mode: multiply;
+  object-fit: contain;
+  transition: transform 0.5s; /* Transisi untuk efek flip */
+}
+
+.skill-tooltip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3f0028, #582300);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-family: Outfit;
+  font-size: 20px;
+  font-weight: 800;
+  transform: rotateY(90deg); /* Menyembunyikan teks dengan rotasi */
+  transition: transform 0.5s; /* Transisi untuk efek flip */
+}
+
+.skill-item:hover .skill-img {
+  transform: rotateY(90deg); /* Flip gambar saat di-hover */
+}
+
+.skill-item:hover .skill-tooltip {
+  transform: rotateY(0deg); /* Menampilkan teks saat di-hover */
+}
+@media (max-width: 767px) {
+  .skills-section {
+    padding: 10px 0;
+    text-align: center;
+    margin: 40px; /* Margin lebih kecil untuk mobile */
+  }
+
+  .skills-title {
+    margin-bottom: 20px; /* Margin lebih kecil untuk mobile */
+  }
+
+  .skills-title h1 {
+    font-size: 2.5rem; /* Ukuran font lebih kecil untuk mobile */
+    font-weight: 600;
+  }
+
+  .skills-container {
+    display: flex; /* Menggunakan flexbox untuk mobile */
+    flex-wrap: wrap; /* Membungkus item ke baris berikutnya */
+    justify-content: center; /* Menyusun item skill di tengah */
+    gap: 15px; /* Gap antar item */
+  }
+
+  .skill-item {
+    width: 80px; /* Ukuran item skill lebih kecil untuk mobile */
+    height: 80px; /* Ukuran item skill lebih kecil untuk mobile */
+    transition: transform 0.1s ease; /* Mempercepat efek flip */
+  }
+
+  .skill-img {
+    width: 40px; /* Ukuran logo lebih kecil untuk mobile */
+  }
+
+  .skill-tooltip {
+    font-size: 15px; /* Ukuran font lebih kecil untuk mobile */
+  }
+
+  /* Mengatur agar 3 item skill dalam satu baris */
+  .skill-item {
+    flex: 1 1 calc(33.00% - 20px); /* Mengatur lebar item skill untuk 3 kolom */
+    box-sizing: border-box; /* Menghindari overflow */
+  }
+}

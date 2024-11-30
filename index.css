@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #161513;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+}
+
+.logo {
+  width: 500px; /* Atur lebar logo */
+  height: 500px; /* Atur tinggi logo */
+  display: block; /* Menampilkan logo sebagai blok */
+  margin: 0 auto; /* Mengatur margin otomatis untuk memusatkan logo */
+}

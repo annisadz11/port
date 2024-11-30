@@ -1,0 +1,124 @@
+.certification {
+    display: flex;
+    flex-direction: column; /* Mengatur layout menjadi kolom */
+    align-items: center; /* Rata tengah secara horizontal */
+    padding: 20px 50px; /* Ruang di atas dan bawah */
+}
+
+.certification-title {
+    position: relative;
+    margin-bottom: 50px; /* Jarak antara judul dan konten di bawahnya */
+}
+
+.certification-title h1 {
+    padding: 10px -5px;
+    font-size: 70px;
+    font-weight: 550;
+    color: #ffffff; /* Warna teks */
+    position: relative; /* Memastikan h1 berada di atas gambar */
+    z-index: 1; /* Memastikan teks di atas gambar */
+}
+
+.theme-pattern {
+    position: absolute; /* Memungkinkan gambar berada di belakang judul */
+    bottom: 0; /* Menempatkan gambar di bawah judul */
+    right: 0; /* Menempatkan gambar di kanan */
+    width: 60%; /* Mengatur lebar gambar untuk memperkecil ukuran */
+    height: auto; /* Menjaga rasio aspek gambar */
+    z-index: -1; /* Memastikan gambar pola berada di belakang teks */
+}
+
+.certification-list {
+    display: flex;
+    flex-direction: row; /* Mengubah menjadi baris untuk dua kolom */
+    flex-wrap: wrap; /* Membungkus kolom jika tidak cukup ruang */
+    justify-content: center; /* Memusatkan kolom */
+    gap: 35px; /* Jarak antar kolom */
+}
+
+.certification-item {
+    background: #ede8ea; /* Warna latar belakang abu-abu */
+    border-radius: 30px; /* Sudut membulat pada kontainer */
+    padding: 20px; /* Padding di dalam kontainer */
+    box-shadow: 0 2px 10px rgba(151, 42, 42, 0.1);
+    width: calc(25% - 10px); /* Mengatur lebar untuk dua kolom dengan jarak */
+    max-width: 500px; /* Max width untuk kontainer */
+    text-align: center;
+    position: relative; /* Memungkinkan pseudo-element untuk diposisikan */
+    overflow: hidden; /* Menghindari overflow dari pseudo-element */
+    transition: background 0.3s ease, border-color 0.3s ease; /* Transisi halus untuk background dan border */
+    border: 2px solid transparent; /* Border transparan untuk efek hover */
+    cursor: pointer;
+}
+
+.certification-item:hover {
+    background-image: linear-gradient(45deg, #510b37, #5a2b0b);
+    border-color: rgb(165, 157, 157); /* Ganti warna border saat hover */
+}
+
+.certification-item h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: transparent; /* Mengatur warna teks menjadi transparan */
+    background: linear-gradient(45deg, #8b1760, #e0ac42); /* Gradient sebagai latar belakang */
+    -webkit-background-clip: text; /* Memotong latar belakang ke teks */
+    background-clip: text; /* Memotong latar belakang ke teks */
+    transition: color 0.3s ease; /* Transisi halus untuk warna */
+}
+
+.certification-item:hover h2 {
+    color: rgb(255, 255, 255); /* Mengubah warna teks h2 menjadi putih saat hover */
+    background: none; /* Menghapus background gradient saat hover */
+}
+
+.certification-item p {
+    margin: 6px 0;
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0); /* Mengatur warna teks p menjadi hitam saat tidak di-hover */
+    transition: color 0.3s ease; /* Transisi halus untuk warna */
+}
+
+.certification-item:hover p {
+    color: rgb(255, 204, 0); /* Mengubah warna teks p menjadi putih saat hover */
+}
+
+.certification-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.certification-item a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .certification {
+        padding: 20px 80px; /* Mengurangi padding untuk mobile */
+    }
+    .certification-title h1 {
+        font-size: 40px; /* Mengurangi ukuran font untuk judul di mobile */
+    }
+
+    .theme-pattern {
+        width: 60%; /* Mengatur lebar gambar menjadi 100% untuk mobile */
+    }
+
+    .certification-list {
+        flex-direction: column; /* Mengubah menjadi kolom untuk mobile */
+        align-items: center; /* Memusatkan kolom */
+    }
+
+    .certification-item {
+        width: 90%; /* Mengatur lebar item sertifikasi untuk mobile */
+        max-width: none; /* Menghapus batasan max-width untuk mobile */
+    }
+
+    .certification-item h2 {
+        font-size: 1.2em; /* Mengurangi ukuran font untuk h2 di mobile */
+    }
+
+    .certification-item p {
+        font-size: 0.9rem; /* Mengurangi ukuran font untuk paragraf di mobile */
+    }
+}

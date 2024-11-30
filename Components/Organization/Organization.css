@@ -1,0 +1,146 @@
+.organization {
+    display: flex;
+    flex-direction: column; /* Mengatur layout menjadi kolom */
+    align-items: center; /* Rata tengah secara horizontal */
+    padding: 10px 10px; /* Ruang di atas dan bawah */
+}
+
+.organization-title {
+    position: relative;
+    margin-bottom: 10px; /* Jarak antara judul dan konten di bawahnya */
+}
+
+.organization-title h1 {
+    padding: 15px 30px;
+    font-size: 55px;
+    font-weight: 550;
+    color: #ffffff; /* Warna teks */
+}
+
+.organization-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1; /* Memastikan gambar pola berada di belakang teks */
+}
+
+.organization-border {
+    width: 90%; /* Mengatur lebar border */
+    max-width: 1500px; /* Maksimal lebar untuk konten */
+    margin: 10px 0; /* Jarak antar border */
+    padding: 10px; /* Padding di dalam border */
+    border: 1px solid #ddd; /* Border berwarna abu-abu */
+    border-radius: 10px; /* Sudut membulat pada border */
+    box-shadow: 0 2px 10px rgba(152, 52, 52, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.organization-container {
+    background: #ede8ea;
+    border-radius: 15px; /* Sudut membulat pada kontainer */
+    padding: 20px; /* Padding di dalam kontainer */
+    text-align: center; /* Rata tengah untuk teks */
+}
+
+.organization-images {
+    display: flex; /* Mengatur gambar sejajar */
+    justify-content: center; /* Rata tengah secara horizontal */
+    flex-wrap: wrap; /* Membungkus gambar jika diperlukan */
+    gap: 20px; /* Jarak antar gambar */
+    margin-bottom: 20px; /* Jarak bawah untuk gambar */
+}
+
+.organization-image {
+    width: 200px; /* Lebar gambar */
+    height: 320px; /* Tinggi gambar */
+    border-radius: 10px; /* Sudut membulat pada gambar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    object-fit: cover; /* Mengatur gambar agar tidak terdistorsi */
+}
+
+.organization-name {
+    font-size: 25px; /* Ukuran font untuk nama organisasi */
+    font-weight: bold; /* Tebal */
+    background: linear-gradient(170deg, #DF8908 10%, #B415FF 100%); /* Gradient warna */
+    background-clip: text; /* Memotong latar belakang ke teks */
+    -webkit-background-clip: text; /* Untuk browser WebKit */
+    -webkit-text-fill-color: transparent; /* Mengisi warna teks menjadi transparan */
+    margin-bottom: 5px; /* Jarak bawah untuk nama organisasi */
+}
+
+.organization-period {
+    font-size: 24px; /* Ukuran font untuk periode */
+    line-height: 1.5; /* Jarak antar baris */
+    background: linear-gradient(170deg, #DF8908 10%, #B415FF 100%); /* Gradient warna */
+    background-clip: text; /* Memotong latar belakang ke teks */
+    -webkit-background-clip: text; /* Untuk browser WebKit */
+    -webkit-text-fill-color: transparent; /* Mengisi warna teks menjadi transparan */
+    margin-bottom: 10px; /* Jarak bawah untuk nama organisasi */
+}
+.organization-department {
+    font-size: 16px; /* Ukuran font untuk departemen */
+    line-height: 1.5; /* Jarak antar baris */
+    color: #000; /* Warna teks hitam untuk departemen */
+    margin: 1px 0; /* Margin untuk memisahkan teks */
+    font-weight: bold;
+}
+
+.organization-jobdesk {
+    font-size: 16px; /* Ukuran font untuk jobdesk */
+    line-height: 1.5; /* Jarak antar baris */
+    color: #000000; /* Warna kuning untuk jobdesk */
+    margin: 10px 0; /* Margin untuk memisahkan teks */
+}
+@media(max-width: 768px) {
+    .organization {
+        padding: 30px; /* Mengurangi padding untuk mobile */
+    }
+
+    .organization-title h1 {
+        font-size: 38px; /* Ukuran font lebih kecil untuk mobile */
+        padding: 10px 15px; /* Mengurangi padding */
+    }
+
+    .organization-title img {
+        width: 130px;
+        margin-right: -0px;
+    }
+
+    .organization-border {
+        width: 80%; /* Lebar border lebih besar untuk mobile */
+        margin: 5px 0; /* Mengurangi jarak antar border */
+        padding: 5px; /* Mengurangi padding di dalam border */
+    }
+
+    .organization-container {
+        padding: 10px; /* Mengurangi padding di dalam kontainer */
+    }
+
+    .organization-images {
+        flex-direction: column; /* Mengatur gambar menjadi kolom */
+        align-items: center; /* Rata tengah secara horizontal */
+        gap: 10px; /* Mengurangi jarak antar gambar */
+    }
+
+    .organization-image {
+        width: 100%; /* Lebar gambar 100% untuk responsivitas */
+        height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+        max-width: 200px; /* Maksimal lebar gambar */
+    }
+
+    .organization-name {
+        font-size: 18px; /* Ukuran font untuk nama organisasi lebih kecil */
+        margin-bottom: 3px; /* Mengurangi jarak bawah untuk nama organisasi */
+    }
+
+    .organization-period {
+        font-size: 17px; /* Ukuran font untuk periode lebih kecil */
+    }
+
+    .organization-department {
+        font-size: 14px; /* Ukuran font untuk departemen lebih kecil */
+    }
+
+    .organization-jobdesk {
+        font-size: 14px; /* Ukuran font untuk jobdesk lebih kecil */
+    }
+}

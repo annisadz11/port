@@ -1,0 +1,64 @@
+.footer {
+    margin: 100px 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.footer-bottom-right {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-bottom-left {
+    display: flex;
+    gap: 30px;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        margin: 30px 50px; /* Mengurangi margin untuk lebih responsif */
+    }
+
+    .footer-top {
+        flex-direction: column; /* Mengubah arah menjadi kolom */
+        align-items: flex-start; /* Menyelaraskan ke kiri */
+        gap: 10px; /* Mengatur jarak antar elemen */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Mengubah arah menjadi kolom */
+        gap: 10px; /* Mengatur jarak antar elemen */
+        margin-bottom: 30px; /* Mengurangi margin bawah */
+    }
+
+    .footer-bottom-left, 
+    .footer-bottom-right {
+        justify-content: flex-start; /* Menyelaraskan konten ke kiri */
+        gap: 30px; /* Mengurangi jarak antar elemen */
+    }
+
+    .footer-bottom-left {
+        flex-wrap: wrap; /* Memungkinkan elemen membungkus jika terlalu panjang */
+    }
+
+    .footer-bottom-right {
+        flex-wrap: wrap; /* Memungkinkan elemen membungkus jika terlalu panjang */
+    }
+
+    .footer-bottom-left,
+    .footer-bottom-right {
+        font-size: 10px; /* Mengurangi ukuran font untuk mobile */
+    }
+}

@@ -1,0 +1,91 @@
+/* Desktop Styles */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Mengurangi jarak antar elemen */
+    color: white;
+    padding: 120px; /* Menjaga jarak yang cukup dalam About */
+    margin-top: 30px; /* Menyesuaikan jarak dari Hero */
+    max-width: 100%; /* Pastikan lebar container tidak melampaui layar */
+    box-sizing: border-box; /* Pastikan padding tidak menyebabkan meluasnya elemen */
+}
+
+.container-about {
+    width: 100%;
+    text-align: center;
+}
+
+.about-title {
+    position: relative;
+    margin-bottom: 30px; /* Increased the margin-bottom to add space between title and paragraph */
+    max-width: 100%; /* Membatasi lebar agar tidak meluas */
+}
+
+.about-title h1 {
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px; /* Increased the margin for spacing */
+    word-wrap: break-word; /* Memastikan teks akan terpotong jika terlalu panjang */
+}
+
+.about-title span {
+    background: linear-gradient(270deg, #DF8908, #B415FF);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* Styling for paragraph */
+.about-para {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    width: 100%; /* Make sure the paragraph takes the full width of the container */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 30px; /* Apply border radius to make it oval-like */
+    border: 3px solid #fcfbfc;
+    background: linear-gradient(45deg, #3f0028, #582300);
+    max-width: 100%; /* Membatasi lebar agar tidak meluas */
+    box-sizing: border-box; /* Menghindari elemen meluas lebih dari yang diinginkan */
+}
+
+.about-para p {
+    margin-bottom: 40px; /* Adds margin between the paragraphs */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .about {
+        display: none; /* Menyembunyikan elemen About Me di mobile */
+    }
+
+    .more-info {
+        text-align: center; /* Menjaga lebih info tetap di tengah */
+        padding: 20px; /* Menambah padding jika diperlukan */
+        margin-bottom: 10px; /* Mengurangi jarak bawah */
+    }
+
+    .my-skills {
+        padding: 20px; /* Menjaga padding di bagian My Skills */
+        margin-top: 0; /* Menghilangkan jarak atas untuk mendekatkan dengan More Info */
+    }
+}
+
+/* Very Small Screens (Optional) */
+@media (max-width: 480px) {
+    .about-title h1 {
+        font-size: 30px; /* Smaller font for very small screens */
+    }
+
+    .about-para {
+        font-size: 14px; /* Adjust font size for readability */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .about-para p {
+        margin-bottom: 15px; /* Tighten spacing for small screens */
+    }
+}

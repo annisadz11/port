@@ -1,0 +1,124 @@
+/* Header - Navbar */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    position: fixed; /* Membuat header tetap di atas */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Pastikan header selalu berada di atas elemen lainnya */
+    background: #161513; /* Background yang Anda inginkan */
+    padding: 15px 60px; /* Sesuaikan padding jika perlu */
+}
+
+.header-logo {
+    width: 110px; /* Sesuaikan ukuran logo */
+    height: auto; /* Mempertahankan proporsi */
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 1.05rem; 
+}
+
+.header-connect {
+    padding: 13px 20px;
+    border-radius: 40px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.header-connect:hover {
+    transform: scale(1.00);
+}
+
+.header-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    cursor: pointer;
+}
+
+.header-menu li img {
+    display: flex;
+    margin: auto;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: white;
+}
+
+.header-mob-close {
+    display: none;
+}
+
+.header-mob-open {
+    display: none;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header {
+        margin: 0 20px;
+        padding: 30px 10px; /* Sesuaikan padding untuk mobile */
+    }
+
+    .header-logo {
+        width: 70px; /* Ukuran lebih kecil untuk layar lebih kecil */
+    }
+
+    .header-mob-open {
+        display: block;
+        position: absolute; /* Mengubah posisi menjadi absolute */
+        right: 10px; /* Posisi lebih dekat ke tepi */
+        top: 40px;
+        cursor: pointer; /* Menambahkan cursor pointer */
+    }
+
+    .header-mob-close {
+        display: block;
+        position: absolute;
+        top: 45px;
+        right: 20px; /* Mengubah posisi menjadi absolute */
+        width: 20px;
+        z-index: 1001; /* Pastikan tombol close berada di atas menu */
+        cursor: pointer; /* Menambahkan cursor pointer */
+        margin-bottom: 0px;
+    }
+
+    .header-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start; /* Ubah ke flex-start untuk merapikan */
+        top: 0;
+        gap: 20px; /* Mengurangi jarak antar item menu */
+        background-color: #1F0016;
+        width: 190px; /* Lebar menu lebih kecil */
+        height: 100%;
+        z-index: 2;
+        transition: right 0.3s ease; /* Percepat transisi */
+        right: -250px; /* Menyembunyikan menu di luar layar */
+        padding-top: 30px;
+    }
+
+    .header-menu.open {
+        right: 0; /* Tampilkan menu saat terbuka */
+    }
+
+    .header-menu li {
+        font-size: 20px; /* Ukuran font lebih kecil */
+        padding: 10px 25px; /* Padding untuk item menu */
+        width: 100%; /* Pastikan item menu lebar penuh */
+        text-align: left; /* Rata kiri untuk teks */
+    }
+
+    .header-menu li:hover {
+        background-color: rgba(130, 5, 5, 0.1); /* Efek hover untuk item menu */
+    }
+}

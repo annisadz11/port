@@ -1,0 +1,182 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    margin: 30px 170px;
+}
+
+.contact-title {
+    position: relative;
+}
+
+.contact-title h1 {
+    padding: 0px 30px;
+    font-size: 65px;
+    font-weight: 600;
+}
+
+.contact-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.contact-section {
+    display: flex;
+    gap: 150px;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-left h1 {
+    font-size: 55px;
+    font-weight: 600;
+    background: linear-gradient(270deg, #DF8908 80%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+    max-width: 550px;
+    color: #D8D8D8;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #D8D8D8;
+    font-size: 20px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column; /* Mengatur elemen dalam kolom */
+    gap: 20px; /* Jarak antar elemen */
+}
+
+.contact-right label {
+    font-family: Outfit;
+    font-size: 20px;
+    color: #A0A0A0; /* Sesuaikan warna label */
+    margin-bottom: 2px; /* Jarak antara label dan input */
+}
+
+.contact-right input,
+.contact-right textarea {
+    border: none;
+    width: 700px; /* Menyesuaikan lebar agar sama */
+    border-radius: 5px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: Outfit;
+    font-size: 20px;
+}
+
+.contact-right input {
+    height: 60px; /* Tinggi input */
+    padding-left: 40px; /* Padding kiri untuk input */
+}
+
+.contact-right textarea {
+    height: 100px; /* Sesuaikan tinggi textarea agar sejajar dengan input */
+    padding: 20px; /* Padding untuk textarea */
+}
+
+.contact-submit {
+    display: block; /* Mengubah menjadi block agar bisa di-center */
+    margin: 15px auto; /* Margin atas/bawah 15px, kiri/kanan auto untuk center */
+    padding: 10px 20px; /* Padding tombol */
+    background: #DF8908; /* Warna latar belakang gradasi */
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Outfit;
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    transition: background 0.3s ease, border 0.3s ease; /* Transisi halus untuk warna latar belakang dan border */
+}
+
+.contact-submit:hover {
+    background: #0000ff; /* Warna latar belakang gradasi saat hover */
+    border: 1px solid rgb(0, 0, 0); /* Menambahkan border putih saat hover */
+}
+@media(max-width:768px){
+    .contact{
+        gap: 60px;
+        margin: 50px 80px;
+        align-items: start;
+    }
+    .contact-title h1{
+        padding: 0;
+        font-size: 50px;
+        font-weight: 600;
+    }
+    .contact-title img{
+        width: 120px;
+        margin-right: -20px;
+    }
+    .contact-section{
+        flex-direction: column;
+    }
+    .contact-left h1{
+        font-size: 45px;
+    }
+    .contact-left p{
+        font-size: 18px;
+    }
+    .contact-detail{
+        gap: 15px;
+    }
+    .contact-detail img{
+        width: 20px;
+    }
+    .contact-right {
+        display: flex;
+        flex-direction: column; /* Pastikan elemen dalam kolom */
+        align-items: flex-start; /* Mengatur elemen ke kiri */
+        padding-left: 10px; /* Menambahkan padding kiri untuk memberikan jarak */
+    }
+
+    .contact-right label {
+        font-size: 18px;
+        margin-bottom: 5px; /* Menambahkan jarak antara label dan input */
+    }
+
+    .contact-right input {
+        width: 95%; /* Mengatur lebar input */
+        font-size: 18px;
+        margin-left: 0; /* Menghapus margin kiri untuk menggeser ke kiri */
+        padding: 10px; /* Menambahkan padding untuk input */
+    }
+
+    .contact-right textarea {
+        width: 95%; /* Mengatur lebar textarea */
+        font-size: 20px;
+        margin-left: 0; /* Menghapus margin kiri untuk menggeser ke kiri */
+        padding: 10px; /* Menambahkan padding untuk textarea */
+    }
+
+    .contact-submit {
+        font-size: 18px;
+        align-items: center;
+        padding: 8px 20px;
+    }
+}
